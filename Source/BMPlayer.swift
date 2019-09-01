@@ -154,7 +154,7 @@ open class BMPlayer: UIView {
             isURLSet = true
         }
         
-        panGesture.isEnabled = true
+        //        panGesture.isEnabled = true
         playerLayer?.play()
         isPauseByUser = false
     }
@@ -396,8 +396,8 @@ open class BMPlayer: UIView {
             make.edges.equalTo(self)
         }
         
-        panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.panDirection(_:)))
-        self.addGestureRecognizer(panGesture)
+        //        panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.panDirection(_:)))
+        //        self.addGestureRecognizer(panGesture)
     }
     
     fileprivate func initUIData() {
@@ -469,7 +469,7 @@ extension BMPlayer: BMPlayerLayerViewDelegate {
         default:
             break
         }
-        panGesture.isEnabled = state != .playedToTheEnd
+        //        panGesture.isEnabled = state != .playedToTheEnd
         delegate?.bmPlayer(player: self, playerStateDidChange: state)
     }
     
